@@ -1,0 +1,7 @@
+{
+    "data":[
+        {"img":"../imgs/Member_of_family/icon-1@2x.png","name":"曲婉婷","sex":"女","age":"27岁","details":"心脏病治疗6个月完全痊愈","delete":"删除","month":"3个月前"},
+        {"img":"../imgs/Member_of_family/icon-2@2x.png","name":"李家明","sex":"男","age":"28岁","details":"甲状腺治疗三个月完全痊愈","delete":"删除","month":"2个月前"},
+        {"img":"../imgs/Member_of_family/icon-3@2x.png","name":"小叮当","sex":"男","age":"8岁","details":"先天性哮喘治疗二年完全痊愈","delete":"删除","month":"1个月前"} 
+    ]
+}

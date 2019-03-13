@@ -1,0 +1,7 @@
+{
+    "Hospital_Homepage":[
+        {"img":"../imgs/Hospital_Homepage/pic-5@2x.png","name":"上海同济医院","km":"距离 933m","where":"惠济区第五大道与隆博路交叉口"},
+        {"img":"../imgs/Hospital_Homepage/pic-6@2x.png","name":"上海市第七人民医院","km":"距离 1.2km","where":"惠济区健康路与隆博路交叉口"},
+        {"img":"../imgs/Hospital_Homepage/pic-7@2x.png","name":"上海市中心医院","km":"距离 2.5km","where":"惠济区远航路中段"}
+    ]
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../plug/vue.js"></script>
+    <script src="../plug/axios.min.js"></script>
+    <script src="../plug/rem.js"></script>
+    <link rel="stylesheet" href="../less/Doctor List.css">
+    <link rel="stylesheet" href="../less/reset.css">
+    <script src="../plug/zepto.js"></script>
+    <script src="../plug/zepto.touch.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <img src="../imgs/Doctor List/back@2x.png" alt="" class="href">
+        <span>医生列表</span>
+        <img src="../imgs/Doctor List/fd@2x (1).png" alt="">
+    </div>
+    <div class="text">
+        <ul>
+            <li>
+                外科
+                <p></p>
+            </li>
+            <li>内科</li>
+            <li>儿科</li>
+            <li>妇科</li>
+            <li>精神科</li>
+            <li>肿瘤科</li>
+        </ul>
+    </div>
+    <div id="box">
+        <!-- <img src="http://img4.imgtn.bdimg.com/it/u=4256886369,124452965&fm=26&gp=0.jpg" alt="" v-show="isloading" class="imgs"> -->
+        <ul>
+            <li v-for="(item,index) in data" class="one" @tap="fn(index)">
+                <div class="li">
+                    <div class="img">
+                        <!-- 存放左边图片的 -->
+                        <img :src="item.img" alt="">
+                    </div>
+                    <div class="content">
+                        <!-- 右边内容框 -->
+                        <p>
+                            <span>{{ item.name }}</span>
+                            <span>{{ item.part_name }}</span>
+                        </p>
+                        <p>
+                            {{ item.location }}
+                        </p>
+                        <p>
+                            {{ item.attending }}
+                        </p>
+                        <p>
+                            {{ item.side }}
+                        </p>
+                        <div class="last">
+                            <span>{{ item.plan }}</span>
+                            <span>{{ item.num }}</span>
+                            <div>
+                                <span>{{ item.good }}</span>
+                                <span>{{ item.percent }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="footer">
+            <span></span>
+            <span>我们也是有底线的</span>
+            <span></span>
+        </div>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: '#box',
+            data: {
+                data: [],
+                isloading: true
+            },
+            methods: {
+                fn(index){
+                    if(index == 2){
+                        location.href = "./outpatient appointment.html";
+                    }
+                }  
+            },
+            created() {
+                this.isloading = true;
+            },
+            mounted() {
+                this.isloading = false;
+                var that = this;
+                axios.get('../json/Doctor List.json').then(function (res) {
+                    console.log(res);
+                    that.data = res.data.doctor_wai;
+                }).catch(function (err) {
+                    console.log(err);
+                })
+            }
+        });
+
+        $(".href").on("tap",function(){
+            location.href="./Hospital_Homepage.html";
+        })
+    </script>
+</body>
+
+</html>

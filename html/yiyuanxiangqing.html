@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../less/reset.css">
+    <link rel="stylesheet" href="../less/hospital details.css">
+    <script src="../plug/axios.min.js"></script>
+    <script src="../plug/zepto.js"></script>
+    <script src="../plug/zepto.touch.js"></script>
+    <script src="../plug/rem.js"></script>
+    <script src="../plug/vue.js"></script>
+</head>
+
+<body>
+    <div class="box-a">
+        <p class="img_"><img src="../imgs/hospital details 医院详情/back@2x.png" alt=""></p>
+    </div>
+    <div class="box-b">
+        <p><img src="../imgs/hospital details 医院详情/head@2x.png" alt=""></p>
+        <p>上海市东方医院</p>
+        <p>地址:上海市浦东新区东方路58号</p>
+        <p>联系电话:0551-6678908</p>
+    </div>
+    <div class="box-c">
+        <p><span>医院详情</span><span>></span></p>
+        <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp上海是东方医院位于陆家嘴金融贸易区，正迅速崛起一所集医疗、教学、科研于--体的综合性三甲等医院,同济大学附属东方医院。医院1700多名员工中,博士研究生78名,硕士研究生157名,215名高级员工职称中</p>
+    </div>
+    <div class="box-d">
+        <p><span>医院图片</span><span>></span></p>
+        <ul>
+            <li>
+                <img src="../imgs/hospital details 医院详情/pic-1@2x.png" alt="">
+            </li>
+            <li><img src="../imgs/hospital details 医院详情/pic-6@2x.png" alt=""></li>
+            <li><img src="../imgs/hospital details 医院详情/pic-2@2x.png" alt=""></li>
+            <li><img src="../imgs/hospital details 医院详情/pic-3@2x.png" alt=""></li>
+            <li><img src="../imgs/hospital details 医院详情/pic-4@2x.png" alt=""></li>
+            <li><img src="../imgs/hospital details 医院详情/pic-5@2x.png" alt=""></li>
+        </ul>
+    </div>
+</body>
+
+</html>
+<script>
+
+    $(".img_").on("tap", function () {
+        location.href = './List of hospitals.html';
+    })
+</script>
+<!-- <script>
+    var vm = new Vue({
+        el: '#box-a',
+        data: {
+            data: [],
+        },
+        mounted() {
+            var that = this;
+            axios.get("../json/积分商城.json").then(function(res) {
+                console.log(res);
+                that.data = res.data;
+            }).catch(function(err) {
+                console.log(err);
+            })
+        }
+    });
+</script> -->

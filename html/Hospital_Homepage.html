@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../less/reset.css">
+    <link rel="stylesheet" href="../plug/swiper/css/swiper.css">
+    <link rel="stylesheet" href="../less/Hospital_Homepage.css">
+    <script src="../plug/axios.min.js"></script>
+    <script src="../plug/vue.js"></script>
+    <script src="../plug/rem.js"></script>
+    <script src="../plug/zepto.js"></script>
+    <script src="../plug/zepto.touch.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <p class="title">
+            <img src="../imgs/Hospital_Homepage/定位@2x.png" alt="">
+            <span class="title_text"><a href="Current_city.html">河南省郑州市金水区</a></span>
+        </p>
+        <div class="right">
+            <img src="../imgs/Hospital_Homepage/对话@2x.png" alt="">
+            <span>3</span>
+        </div>
+    </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="../imgs/Hospital_Homepage/top @2x.png"></div>
+            <div class="swiper-slide"><img src="../imgs/Hospital_Homepage/分组 3@2x.png"></div>
+            <div class="swiper-slide"><img src="../imgs/Hospital_Homepage/分组 4@2x.png"></div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+    
+        <!-- 如果需要导航按钮 -->
+        <!-- <div class="swiper-button-prev"></div> -->
+        <!-- <div class="swiper-button-next"></div> -->
+
+    </div>
+    <div class="bg_color">
+        <div class="allul">
+            <ul class="mian_one">
+                <li>
+                    <img src="../imgs/Hospital_Homepage/icon-1@2x.png" alt="">
+                </li>
+                <li>
+                    <img src="../imgs/Hospital_Homepage/icon-2@2x.png" alt="" class="img_">
+                </li>
+                <li>
+                    <img src="../imgs/Hospital_Homepage/icon-3@2x.png" alt="">
+                </li>
+                <li>
+                    <img src="../imgs/Hospital_Homepage/icon-4@2x.png" alt="">
+                </li>
+            </ul>
+            <ul class="mian_text">
+                <li>
+                    <a href="#">预约</a>
+                </li>
+                <li>
+                    <a href="../html/case-name .html">病例</a>   
+                </li>
+                <li>
+                    <a href="#">缴费</a> 
+                </li>
+                <li>
+                    <a href="#">药箱</a>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <p class="content_title">
+                热门医生
+                <span><a href="./Doctor List.html">更多</a></span>
+            </p>
+            <ul class="top">
+                <li>
+                    <p>近视调节</p>
+                    <p>
+                        <img src="../imgs/Hospital_Homepage/pic-1@2x.png" alt="">
+                    </p>
+                </li>
+                <li>
+                    <p>中医理疗</p>
+                    <p>
+                        <img src="../imgs/Hospital_Homepage/pic-2@2x.png" alt="">
+                    </p>
+                </li>
+            </ul>
+            <ul class="top">
+                <li>
+                    <p>北鼻育儿</p>
+                    <p>
+                        <img src="../imgs/Hospital_Homepage/pic-3@2x.png" alt="">
+                    </p>
+                </li>
+                <li>
+                    <p>医疗美容</p>
+                    <p>
+                        <img src="../imgs/Hospital_Homepage/pic-4@2x.png" alt="">
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="main_three">
+            <p class="content_titles">
+                附近医院
+                <span><a href="./List of hospitals.html">更多</a></span>
+            </p>
+            <ul id="box">
+                <li v-for="item in data">
+                    <div class="item_img">
+                        <img :src="item.img" alt="">
+                    </div>
+                    <div class="item_content">
+                        <p class="name">
+                            {{ item.name }}
+                            <span>{{ item.km }}</span>
+                        </p>
+                        <p class="where">
+                            {{ item.where }}
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <ul class="footer">
+        <li>
+            <img src="../imgs/Hospital_Homepage/home@2x.png" alt="">
+        </li>
+        <li class="info">
+            <p>
+                <img src="../imgs/my_msg/createtask@2x.png" alt="">
+            </p>
+            <p>资讯</p>
+        </li>
+        <li class="activity">
+            <p>
+                <img src="../imgs/my_msg/coupons copy 2@2x.png" alt="">
+            </p>
+            <p>活动</p>
+        </li>
+        <li class="my">
+            <p>
+                <img src="../imgs/Hospital_Homepage/mine@2x.png" alt="">
+            </p>
+            <p>我的</p>
+        </li>
+    </ul>
+</body>
+
+</html>
+<script>
+    var vm = new Vue({
+        el: "#box",
+        data: {
+            data: []
+        },
+        mounted() {
+            var that = this;
+            axios.get("../json/Hospital_Homepage.json").then(function (res) {
+
+                that.data = res.data.Hospital_Homepage;
+                console.log(that.data);
+            }).catch(function (err) {
+                console.log(err);
+            })
+        }
+    });
+</script>
+<script type="text/javascript" src="../plug/swiper/js/swiper.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        loop: true, // 循环模式选项
+
+        direction: 'horizontal',
+        autoplay: {
+            delay: 3000,
+        },
+
+        // 如果需要分页器
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    })
+    $(".right").on("tap",function(){
+        location.href='./new.html';
+    });
+    $(".href").on("tap",function(){
+        location.href='./Hospital_Homepage.html';
+    });
+    $(".activity").on("tap",function(){
+        location.href='./activity.html';
+    });
+    $(".my").on("tap",function(){
+        location.href='./my_msg.html';
+    })
+    $(".img_").on("tap",function(){
+        location.href='./case-name .html';
+    })
+    $(".info").on("tap",function(){
+        location.href='./information.html';
+    })
+    var mySwiper = new Swiper('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        autoplay: true,
+        effect: 'slide',
+        pagination: {
+            el: '.swiper-pagination',
+        }
+    });
+</script>

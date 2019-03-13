@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: big;
+  /*这里是说明调用来的字体名字*/
+  src: url("../font/PINGFANG\ BOLD.TTF");
+  /*这里是字体文件路径*/
+}
+@font-face {
+  font-family: small;
+  /*这里是说明调用来的字体名字*/
+  src: url("../font/PINGFANG\ REGULAR.TTF");
+  /*这里是字体文件路径*/
+}
+.hide{
+  display: none;
+}
+.header {
+  overflow: hidden;
+  width: 100%;
+  font-family: big;
+  font-size: 0.25rem;
+  padding: 0.32rem 0;
+  text-align: center;
+  color: white;
+  background: -webkit-linear-gradient(-45deg, #17cce6, #4a90e2);
+  img:nth-child(1) {
+    float: left;
+    width: 3%;
+    margin-left: 0.3rem;
+  }
+  span:nth-child(2) {
+    display: inline-block;
+  }
+  span:nth-child(3) {
+    float: right;
+    margin-right: 0.3rem;
+    float: right;
+  }
+}
+.zt {
+  width: 100%;
+  display: flex;
+  margin-top: 0.1rem;
+  li {
+    font-family: small;
+    font-size: 0.28rem;
+    color: #4a4a4a;
+    flex: 1;
+    text-align: center;
+  }
+  li:nth-child(1) {
+    color: #4a90e2;
+    p {
+      width: 0.47rem;
+      height: 0.03rem;
+      margin-left: 0.7rem;
+      margin-top: 0.05rem;
+      background: #4a90e2;
+    }
+  }
+}
+.vue_text {
+  width: 6.89rem;
+  margin: 0 auto;
+  margin-top: 0.1rem;
+  li {
+    padding: 0.2rem 0.3rem 0.3rem;
+    box-sizing: border-box;
+    margin-top: 0.2rem;
+    box-shadow: 0 0.1rem 0.5rem rgba(211, 245, 250, 0.6);
+    .item_title {
+      overflow: hidden;
+      font-family: small;
+      font-size: 0.24rem;
+      color: #4a4a4a;
+      padding-bottom: 0.15rem;
+      border-bottom: 1px solid #cbcbcb;
+      img {
+        width: 0.3rem;
+        height: 0.3rem;
+        vertical-align: -0.07rem;
+      }
+      span {
+        float: right;
+      }
+    }
+    .where {
+      font-family: small;
+      font-size: 0.24rem;
+      color: #4a4a4a;
+      margin-top: 0.23rem;
+    }
+    .km {
+      font-family: small;
+      font-size: 0.24rem;
+      color: #4a4a4a;
+      margin-top: 0.28rem;
+    }
+    .item_last {
+      font-family: small;
+      font-size: 0.24rem;
+      color: #4a4a4a;
+      margin-top: 0.11rem;
+      span {
+        color: #fc6b7d;
+        float: right;
+        font-family: big;
+        font-size: 0.24rem;
+      }
+    }
+  }
+  li:nth-child(4) {
+    .item_last {
+      img {
+        width: 0.3rem;
+        height: 0.3rem;
+      }
+    }
+  }
+  li:nth-child(5){
+      margin-bottom: 1.3rem;
+  }
+}
+.footer{
+    width: 100%;
+    button{
+        position: fixed;
+        bottom:0;
+        left:0;
+        font-family: big;
+        font-size: 0.24rem;
+        color:white;
+        text-align: center;
+        border:none;
+        outline: none;
+        width: 100%;
+        padding:0.34rem 0 ; 
+        box-sizing: border-box;
+        background: -webkit-linear-gradient(-45deg, #17cce6, #4a90e2);
+    }
+}

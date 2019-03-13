@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../less/reset.css">
+    <link rel="stylesheet" href="../less/new.css">
+    <script src="../plug/axios.min.js"></script>
+    <script src="../plug/rem.js"></script>
+    <script src="../plug/vue.js"></script>
+    <script src="../plug/zepto.js"></script>
+    <script src="../plug/zepto.touch.js"></script>
+</head>
+
+<body>
+    <div class="box-a">
+        <ul>
+            <li><img class="img_" src="../imgs/Integral mall   积分商城/2.png" alt=""></li>
+            <li><span>信息</span></li>
+        </ul>
+    </div>
+    <div class="box-b">
+        <ul>
+            <li v-for="(item,index) in data" @tap="fn(index)">
+                <div>
+                    <img :src="item.img">
+                </div>
+                <div>
+                    <p><span>{{item.text}}</span><span>{{item.data}}</span></p>
+                    <p><span>{{item.texts}}</span></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
+<script>
+    var vm = new Vue({
+        el: '.box-b',
+        data: {
+            data: [],
+        },
+        methods: {
+            fn(index){
+                if(index == 0){
+                    location.href = './news.html';
+                }
+            }  
+        },
+        mounted() {
+            var that = this;
+            axios.get("../json/信息.json").then(function(res) {
+                console.log(res);
+                that.data = res.data;
+            }).catch(function(err) {
+                console.log(err);
+            })
+        }
+    });
+    $('.img_').on("tap",function(){
+        location.href = './Hospital_Homepage.html';
+    })
+</script>

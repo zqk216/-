@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../plug/rem.js"></script>
+    <script src="../plug/axios.min.js"></script>
+    <script src="../plug/vue.js"></script>
+    <script src="../plug/zepto.js"></script>
+    <script src="../plug/zepto.touch.js"></script>
+    <link rel="stylesheet" href="../less/reset.css">
+    <link rel="stylesheet" href="../less/List of hospitals.css">
+</head>
+
+<body>
+    <div class="header">
+        <img src="../imgs/Doctor List/back@2x.png" alt="" class="href">
+        <span>医院列表</span>
+        <img src="../imgs/Doctor List/fd@2x (1).png" alt="">
+    </div>
+    <div class="text">
+        <ul>
+            <li>
+                全国
+                <p></p>
+            </li>
+            <li>北京</li>
+            <li>上海</li>
+            <li>天津</li>
+            <li>广州</li>
+            <li>武汉</li>
+        </ul>
+    </div>
+    <div id="box">
+        <ul>
+            <li v-for="(item,index) in data">
+                <div class="img">
+                    <img :src="item.img" alt="">
+                </div>
+                <div class="sometext">
+                    <p>
+                        <span>{{ item.name }}</span>
+                        <span>{{ item.km }}</span>
+                    </p>
+                    <p>
+                        {{ item.dj }}
+                    </p>
+                    <p>
+                        <span>{{ item.good }}</span>
+                        <span>{{ item.percent }}</span>
+                        <span @tap="fn(index)">{{ item.look }}</span>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="footer">
+        <span></span>
+        <span>我们也是有底线的</span>
+        <span></span>
+    </div>
+</body>
+
+</html>
+<script>
+    var vm = new Vue({
+        el: '#box',
+        data: {
+            data: []
+        },
+        methods: {
+          fn(index){
+              if(index == 0){
+                  location.href = "./yiyuanxiangqing.html";
+              }
+          }  
+        },
+        mounted() {
+            var that = this;
+            axios.get('../json/List of hospitals.json').then(function (res) {
+                console.log(res);
+                that.data = res.data.List_of_hospitals;
+            }).catch(function (err) {
+                console.log(err);
+            })
+        }
+    });
+    $(".href").on("tap", function () {
+        location.href = './Hospital_Homepage.html';
+    })
+</script>

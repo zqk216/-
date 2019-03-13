@@ -1,0 +1,199 @@
+*{
+    margin:0;
+    padding:0;
+}
+@font-face {
+    font-family: big;
+    /*这里是说明调用来的字体名字*/
+    src: url("../font/PINGFANG\ BOLD.TTF");
+    /*这里是字体文件路径*/
+}
+@font-face {
+    font-family: small;
+    /*这里是说明调用来的字体名字*/
+    src: url("../font/PINGFANG\ REGULAR.TTF");
+    /*这里是字体文件路径*/
+}
+.header{
+    overflow: hidden;
+    width: 100%;
+    font-family: big;
+    font-size: 0.25rem;
+    padding: 0.32rem 0;
+    text-align: center;
+    background: -webkit-linear-gradient(-45deg, #17CCE6, #4a90e2);
+    img:nth-child(1){
+      float: left;
+      width: 3%;
+      margin-left: 0.3rem;
+    }
+    span{
+      display: inline-block;
+      color:white;
+    }
+    img:nth-child(3){
+      width: 5%;
+      float:right;
+      margin-right: 0.3rem;
+    }
+}
+.box{
+    background:#FBFEFF;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    .title{
+        width: 6.23rem;
+        margin-left: 0.34rem;
+        // float: left;
+        p:nth-child(1){
+            font-family: small;
+            font-size: 0.25rem;
+            color:#9B9B9B; 
+            margin-top: 0.34rem;
+        }
+        p:nth-child(2){
+            margin-top: 0.1rem;
+            img{
+                width: 0.32rem;
+                height: 0.40rem;
+                vertical-align: -0.1rem;
+            }
+            span:nth-child(2){
+                font-family: small;
+                font-size: 0.22rem;
+                color:black;
+            }
+            span:nth-child(3){
+                font-family: small;
+                font-size: 0.18rem;
+                color:#9B9B9B;
+            }
+        }
+        p:nth-child(3){
+            font-family: small;
+            font-size: 0.25rem;
+            color:#9B9B9B; 
+            margin-top: 0.25rem;
+        }
+        .city{
+            display: flex;
+            margin-top: 0.23rem; 
+            li:nth-child(1){
+                width: 1.07rem;
+                height: 0.47rem;
+                text-align: center;
+                line-height: 0.47rem;
+                border: 1px #4a90e2 solid;
+                border-radius: 0.05rem;
+                font-family: small;
+                font-size: 0.24rem;
+                color:#4a90e2;
+                border-radius: 0.1rem;
+            }
+            li:nth-child(2){
+                width: 1.07rem;
+                height: 0.47rem;
+                text-align: center;
+                line-height: 0.47rem;
+                border: 1px #FC6B7D solid;
+                border-radius: 0.05rem;
+                font-family: small;
+                font-size: 0.24rem;
+                color:#FC6B7D;
+                margin-left: 0.68rem;
+            }
+            li:nth-child(3){
+                width: 1.07rem;
+                height: 0.47rem;
+                text-align: center;
+                line-height: 0.47rem;
+                border: 1px #4a90e2 solid;
+                border-radius: 0.05rem;
+                font-family: small;
+                font-size: 0.24rem;
+                color:#4a90e2;
+                margin-left: 0.61rem;
+            }
+        }
+        p:nth-child(5){
+            font-family: small;
+            font-size: 0.25rem;
+            color:#9B9B9B; 
+            margin-top: 0.23rem;
+        }
+        .citys{
+            margin-bottom: 0.1rem;
+            overflow: hidden;
+            li{
+                width: 1.04rem;
+                height: 0.47rem;
+                text-align: center;
+                line-height: 0.47rem;
+                border: 1px #9B9B9B solid;
+                border-radius: 0.05rem;
+                font-family: small;
+                font-size: 0.24rem;
+                color:#9B9B9B;
+                float: left;
+                border-radius: 0.1rem; 
+            }
+            .left{
+                margin-left: 0.6rem;
+            }
+            .top{
+                margin-top: 0.24rem;
+            }
+            .top1{
+                margin-top: 0.43rem;
+            }
+        }
+        p:nth-child(7){
+            font-family: small;
+            font-size: 0.25rem;
+            color:#9B9B9B; 
+            margin-top: 0.23rem;
+            margin-bottom: 0.1rem;
+        }
+    }
+    .a{
+        font-family: big;
+        font-size: 0.25rem;
+        height: 0.34rem;
+        line-height: 0.34rem;
+        padding-left: 0.4rem;
+        padding-top: 0.05rem;
+        box-sizing: border-box;
+        background: rgb(240, 239, 239);
+        color:#4A4A4A;
+    }
+    .city_name{
+        width: 6.23rem;
+        margin-left: 0.34rem;
+        li{
+            width: 100%;
+            font-family: big;
+            font-size: 0.23rem;
+            padding:0.22rem 0;
+            border-bottom: 1px solid #CBCBCB;
+        } 
+        li:nth-child(9){
+            border:none;
+            margin-bottom: 0.8rem;
+        }
+    }
+    .num{
+        position: absolute;
+        right: 0.35rem;
+        bottom: 0.48rem;
+        li{
+            font-family: big;
+            font-size: 0.25rem;
+            color:#4A4A4A;
+            margin-top:0.37rem
+        }
+        li:nth-child(1){
+            color:#FC6B7D;
+        }
+    }
+}

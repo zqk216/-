@@ -1,0 +1,5 @@
+[
+    { "img": "../imgs/new 消息/head-1@2x.png", "text": "系统消息", "texts": "[应用消息]", "data": "19:30" },
+    { "img": "../imgs/new 消息/head-2@2x.png", "text": "就诊提醒", "texts": "您预约的同济医院口腔科林珊医生的门诊已成功", "data": "20:30" },
+    { "img": "../imgs/new 消息/head-3.png", "text": "缴费通知", "texts": "您有新的缴费清单，请注意查收并支付", "data": "21:30" }
+]

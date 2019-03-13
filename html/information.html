@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../less/reset.css">
+    <link rel="stylesheet" href="../less/information.css">
+    <script src="../plug/axios.min.js"></script>
+    <script src="../plug/zepto.js"></script>
+    <script src="../plug/zepto.touch.js"></script>
+    <script src="../plug/rem.js"></script>
+    <script src="../plug/vue.js"></script>
+</head>
+
+<body>
+    <div class="box-a">
+        <p><a href="#">资讯</a></p>
+    </div>
+    <div class="box-b">
+        <ul>
+            <li>
+                <a href="#" class="a1">健康养生</a>
+            </li>
+            <li>
+                <a href="#">医疗知识</a>
+            </li>
+            <li>
+                <a href="#">最新资讯</a>
+            </li>
+            <li>
+                <a href="#">平台活动</a>
+            </li>
+        </ul>
+    </div>
+    <div class="box-c">
+        <ul>
+            <li v-for="(item,index) in data" @tap="fn(index)">
+                <div>
+                    <img :src="item.img" alt="">
+                </div>
+                <div>
+                    <p><span>{{item.text}}</span></p>
+                    <p><span>{{item.texts}}</span></p>
+                    <p><span>{{item.name}}</span></p>
+                    <p><span>{{item.num}}</span> <span>{{item.data}}</span></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="box-d">
+        <ul>
+            <li  class="index">
+                <p><img src="../imgs/information  咨询/homepage@2x.png" alt=""></p>
+                <p><a href="#">资讯</a></p>
+            </li>
+            <li>
+                <img src="../imgs/information  咨询/icon@2x.png" alt="" style="width:0.56rem;height:0.56rem;">
+            </li>
+            <li class="activity">
+                <p><img src="../imgs/information  咨询/coupons copy@2x.png" alt=""></p>
+                <p><a href="#">资讯</a></p>
+            </li>
+            <li class="my">
+                <p><img src="../imgs/information  咨询/mine@2x.png" alt=""></p>
+                <p><a href="#">资讯</a></p>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
+<script>
+    var vm = new Vue({
+        el: '.box-c',
+        data: {
+            data: [],
+        },
+        methods: {
+            fn(index){
+                if(index == 0){
+                    location.href = "./case.html";
+                }
+            }  
+        },
+        mounted() {
+            var that = this;
+            axios.get("../json/资质.json").then(function(res) {
+                console.log(res);
+                that.data = res.data;
+            }).catch(function(err) {
+                console.log(err);
+            })
+        }
+    });
+    $(".index").on("tap",function(){
+        location.href = "./Hospital_Homepage.html";
+    })
+    $(".activity").on("tap",function(){
+        location.href = "./activity.html";
+    })
+    $(".my").on("tap",function(){
+        location.href = "./my_msg.html";
+    })
+</script>

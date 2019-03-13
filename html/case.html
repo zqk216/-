@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../less/reset.css">
+    <link rel="stylesheet" href="../less/case.css">
+    <script src="../plug/axios.min.js"></script>
+    <script src="../plug/zepto.js"></script>
+    <script src="../plug/zepto.touch.js"></script>
+    <script src="../plug/rem.js"></script>
+    <script src="../plug/vue.js"></script>
+</head>
+<body>
+    <div class="header">
+        <img src="../imgs/Doctor List/back@2x.png" alt="" class="img_">
+        资讯
+    </div>
+    <div class="case_name">
+        <p class="case_text">甲状腺疾病患者越来越多，碘盐是元凶？</p>
+        <p class="case_img">
+            <img src="../imgs/case/分组@2x.png" alt="">
+        </p>
+        <p class="texts">
+            甲状腺疾病主要分为内科治疗的甲状腺疾病和外科治疗的甲状腺疾病两大类。
+        </p>
+        <p class="text_two">
+            甲状腺的血液供给：甲状腺由甲状腺上动脉和甲状腺下动脉各一对供
+            给血液对供给血液甲状腺上动脉发自颈外动脉或颈总动脉，伴喉上神
+            经外支下行至甲状腺上极甲状腺下动脉发自甲状颈干，经颈总动脉后
+            方至甲状。
+        </p>
+        <p class="text_three">
+            常能听到杂音或扪到震颤。甲状腺接受交感神经和副交感神经双重支
+            配，前者主要是来自颈部交感神经节的节后纤维，后者来自迷走神经。
+            在甲状腺内的另一种内分泌细胞，称为滤泡旁细胞或明细胞，产生降
+            钙素。当血钙升高时，它有促进降钙作用。
+        </p>
+    </div>
+    <div class="box">
+        <p class="new">最新评论</p>
+        <div id="box">
+            <ul>
+                <li v-for="item in data">
+                    <div class="left_img">
+                        <img :src="item.img" alt="">
+                    </div>
+                    <div class="right_text">
+                        <p class="contene_one">
+                            <span>{{ item.title }}</span>
+                            <span>{{ item.over }}</span>
+                        </p>
+                        <p class="item_text">{{ item.text }}</p>
+                        <p class="item_last">
+                            <span>{{ item.time }}</span>
+                            <span>{{ item.footer }}</span>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <ul>
+            <li>
+                <img src="../imgs/case/icon-4@2x.png" alt="">
+                <input type="text" placeholder="写评论...">
+            </li>
+            <li>
+                <img src="../imgs/case/ico-1@2x.png" alt="">
+            </li>
+            <li>
+                <img src="../imgs/case/icon-2@2x.png" alt="">
+                <img src="../imgs/case/icon-2-1@2x.png" alt="">
+            </li>
+            <li>
+                <img src="../imgs/case/icon-3@2x.png" alt="">
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+<script>
+    var vm = new Vue({
+        el:"#box",
+        data:{
+            data:[],
+        },
+        mounted () {
+            var that = this;
+            axios.get('../json/case.json')
+            .then(function(res){
+                that.data = res.data.case;
+            }).catch(function(err){
+                console.log(err);
+            })
+        }
+    });
+    $(".img_").on("tap",function(){
+        location.href = "./information.html";
+    })
+    
+</script>

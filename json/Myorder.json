@@ -1,0 +1,9 @@
+{
+    "myOrder":[
+        {"img":"../imgs/Myorder/xuan@2x.png","img1":"../imgs/Myorder/unxuan@2x.png","money":"挂号费","isok":"未支付","where":"复旦大学附属华山医院","km":"呼吸科","time":"2018年1月16日","price":"￥22.00"},
+        {"img":"../imgs/Myorder/unxuan@2x.png","img1":"../imgs/Myorder/xuan@2x.png","money":"药费","isok":"已支付","where":"复旦大学附属华山医院","km":"呼吸科","time":"2018年1月16日","price":"￥45.00"},
+        {"img":"../imgs/Myorder/unxuan@2x.png","img1":"../imgs/Myorder/xuan@2x.png","money":"诊疗费","isok":"已取消","where":"复旦大学附属华山医院","km":"呼吸科","time":"2018年1月16日","price":"￥500.00"},
+        {"img":"../imgs/Myorder/unxuan@2x.png","img1":"../imgs/Myorder/xuan@2x.png","money":"积分商城物品","isok":"已兑换","where":"复旦大学附属华山医院","km":"呼吸科","time":"2018年1月16日","img_":"../imgs/Myorder/icon-2@2x 2.png","price":"2000"},
+        {"img":"../imgs/Myorder/unxuan@2x.png","img1":"../imgs/Myorder/xuan@2x.png","money":"药￥费","isok":"已取消","where":"复旦大学附属华山医院","km":"呼吸科","time":"2018年1月16日","price":"￥450.00"}
+    ]
+}

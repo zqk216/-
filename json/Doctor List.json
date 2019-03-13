@@ -1,0 +1,8 @@
+{
+    "doctor_wai":[
+        {"img":"../imgs/Doctor List/doctor-head-1@2x.png","name":"李明","part_name":"(主治医生)","location":"上海市东方医院外科","attending":"主治:","side":"重创伤口，耳鼻喉科 普通外伤等","plan":"诊治:","num":"106例","good":"好评:","percent":"95%"},
+        {"img":"../imgs/Doctor List/doctor-head-2@2x.png","name":"王刚","part_name":"(副主治医生)","location":"深圳市东方医院外科","attending":"主治:","side":"重创伤口，耳鼻喉科 普通外伤等","plan":"诊治:","num":"135例","good":"好评:","percent":"95%"},
+        {"img":"../imgs/Doctor List/doctor-head-3@2x.png","name":"林爽","part_name":"(主治医生)","location":"北京市东方医院外科","attending":"主治:","side":"重创伤口，普通外伤等","plan":"诊治:","num":"135例","good":"好评:","percent":"95%"},
+        {"img":"../imgs/Doctor List/doctor-head-4@2x.png","name":"李青","part_name":"(主治医生)","location":"天津市东方医院外科","attending":"主治:","side":"重创伤口，普通外伤等","plan":"诊治:","num":"101例","good":"好评:","percent":"95%"}
+    ]
+}

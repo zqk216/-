@@ -1,0 +1,276 @@
+@font-face {
+  font-family: big;
+  /*这里是说明调用来的字体名字*/
+  src: url("../font/PINGFANG\ BOLD.TTF");
+  /*这里是字体文件路径*/
+}
+@font-face {
+  font-family: small;
+  /*这里是说明调用来的字体名字*/
+  src: url("../font/PINGFANG\ REGULAR.TTF") /*这里是字体文件路径*/;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  font-size: 100px;
+  background: #FBFEFF;
+}
+.header {
+  width: 100%;
+  height: 3.85rem;
+  background: url("../imgs/register/register-top@2x.png") no-repeat 0 0;
+  background-size: 100%;
+  /* p:nth-child(1){
+      width: 100%;
+      font-size: 0.16rem;
+      img{
+          width: 100%;
+      }
+  } */
+}
+.header p {
+  padding-top: 0.54rem;
+  font-size: 0.26rem;
+  width: 100%;
+}
+.header p span:nth-child(1) {
+  float: left;
+  padding-left: 0.32rem;
+}
+.header p span:nth-child(1) a {
+  font-family: big;
+  font-size: 0.36rem;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.header p span:nth-child(2) {
+  float: right;
+  padding-right: 0.32rem;
+}
+.header p span:nth-child(2) a {
+  font-family: big;
+  font-size: 0.36rem;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.main {
+  overflow: hidden;
+  font-size: 0.16rem;
+  width: 6.86rem;
+  height: 5.64rem;
+  margin: 0 auto;
+  background: #ffffff;
+  box-shadow: 0 0.1rem 0.5rem rgba(211, 245, 250, 0.6);
+}
+.main .enter {
+  padding: 0.72rem 0.93rem 0 0.93rem;
+}
+.main .enter span:nth-child(1) {
+  display: inline-block;
+}
+.main .enter span:nth-child(1) a {
+  font-family: big;
+  font-size: 0.3rem;
+  color: #4A90E2;
+  text-decoration: none;
+}
+.main .enter span:nth-child(1) .line {
+  padding-left: 0.2rem;
+  margin-top: 0.12rem;
+  width: 1rem;
+  border: 0.02rem solid #4A90E2;
+}
+.main .enter span:nth-child(2) {
+  padding-left: 2rem;
+}
+.main .enter span:nth-child(2) a {
+  font-family: big;
+  font-size: 0.3rem;
+  color: #9B9B9B;
+  text-decoration: none;
+}
+.main .enter span:nth-child(2) .line {
+  display: none;
+  margin-left: 3.55rem;
+  text-align: center;
+  margin-top: 0.12rem;
+  width: 1rem;
+  border: 0.02rem solid #4A90E2;
+}
+.main .details {
+  overflow: hidden;
+  width: 5.8rem;
+  margin: 0 auto;
+  margin-top: 0.2rem;
+}
+.main .details .one {
+  padding: 0.3rem 0.2rem 0;
+  box-sizing: border-box;
+}
+.main .details .one span {
+  float: left;
+}
+.main .details .one span img {
+  width: 0.248rem;
+  height: 0.303rem ;
+  margin-top: 0.05rem;
+}
+.main .details .one .input {
+  overflow: hidden;
+  padding-bottom: 0.1rem;
+  border-bottom: 2px solid #F4F4F4;
+}
+.main .details .one .input input {
+  float: left;
+  height: 0.4rem;
+  margin-left: 0.25rem;
+  border: none;
+  color: #CBCBCB;
+  font-family: small;
+  font-size: 0.28rem;
+  outline: none;
+}
+.main .details .one .input p {
+  float: right;
+  height: 0.4rem;
+  line-height: 0.4rem;
+}
+.main .details .one .input p span:nth-child(1) {
+  color: #CBCBCB;
+  padding-right: 0.25rem;
+}
+.main .details .one .input p span:nth-child(2) {
+  font-family: PingFangSC-Regular;
+  font-family: small;
+  font-size: 0.28rem;
+  color: #4A4A4A;
+  padding-right: 0.25rem;
+}
+.main .details .one .input p span:nth-child(3) img {
+  margin-top: 0.05rem;
+  width: 0.35rem;
+  height: 0.21rem;
+}
+.main .details .two {
+  padding: 0.3rem 0.2rem 0;
+  box-sizing: border-box;
+}
+.main .details .two span {
+  float: left;
+}
+.main .details .two span img {
+  width: 0.248rem;
+  height: 0.303rem ;
+  margin-top: 0.05rem;
+}
+.main .details .two .input {
+  overflow: hidden;
+  padding-bottom: 0.1rem;
+  border-bottom: 2px solid #F4F4F4;
+}
+.main .details .two .input input {
+  float: left;
+  height: 0.4rem;
+  margin-left: 0.25rem;
+  border: none;
+  color: #CBCBCB;
+  font-family: small;
+  font-size: 0.28rem;
+  outline: none;
+}
+.main .details .two .input p {
+  float: right;
+  height: 0.4rem;
+  line-height: 0.4rem;
+}
+.main .details .two .input p span {
+  color: #CBCBCB;
+  font-family: small;
+  font-size: 0.28rem;
+}
+.main .details .register {
+  margin-top: 0.4rem;
+}
+.main .details .register input {
+  width: 5.7rem;
+  height: 0.91rem;
+  border: none;
+  background: rgba(155, 155, 155, 0.3);
+  border-radius: 10px;
+  font-family: big;
+  font-size: 0.34rem;
+  color: white;
+}
+.footer {
+  font-family: big;
+  font-size: 0.16rem;
+  width: 6.86rem;
+  position: absolute;
+  top: 11.5rem;
+  left: 50%;
+  transform: translate(-50%);
+}
+.footer .else {
+  height: 0.4rem;
+  line-height: 0.4rem;
+  text-align: center;
+}
+.footer .else span:nth-child(1) {
+  display: inline-block;
+  width: 2.24rem;
+  border: 0.02rem solid #EFF0F0;
+  position: relative;
+  bottom: 0.1rem;
+}
+.footer .else span:nth-child(2) {
+  font-family: PingFangSC-Semibold;
+  font-size: 0.28rem;
+  color: #CBCBCB;
+  text-align: center;
+}
+.footer .else span:nth-child(3) {
+  display: inline-block;
+  width: 2.24rem;
+  border: 0.02rem solid #EFF0F0;
+  position: relative;
+  bottom: 0.1rem;
+}
+.footer ul {
+  margin: 0.43rem 0;
+  list-style: none;
+  text-align: center;
+}
+.footer ul li {
+  text-align: center;
+  display: inline-block;
+  padding: 0 0.3rem;
+}
+.mb1 {
+  width: 4rem;
+  height: 2rem;
+  margin: 0 auto;
+  background: white;
+  text-align: center;
+  position: fixed;
+  top: 1rem;
+  left: 1.7rem;
+  border-radius: 0.1rem;
+  display: none;
+  background: #ecebeb;
+}
+.mb1 p {
+  font-family: big;
+  font-size: 0.3rem;
+  padding-top: 0.35rem;
+}
+.mb1 p button {
+  padding: 0.1rem 0.5rem;
+  background: #cbcbcb;
+  color: #4A4A4A;
+  border: none;
+  outline: none;
+  font-size: 0.17rem;
+}

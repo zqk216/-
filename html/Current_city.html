@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../plug/rem.js"></script>
+    <script src="../plug/zepto.js"></script>
+    <script src="../plug/zepto.touch.js"></script>
+    <link rel="stylesheet" href="../less/reset.css">
+    <link rel="stylesheet" href="../less/Current city.css">
+</head>
+<body>
+    <div class="header">
+        <img src="../imgs/Doctor List/back@2x.png" alt="" class="city">
+        <span>当前城市</span>
+        <img src="../imgs/Doctor List/fd@2x (1).png" alt="">
+    </div>
+    <div class="box">
+        <div class="title">
+            <p>定位城市</p>
+            <p>
+                <img src="../imgs/Current_city/icon-1@2x.png" alt="">
+                <span>中国上海</span>
+                <span>GPS定位</span>
+            </p>
+            <p>历史搜索</p>
+            <ul class="city">
+                <li>郑州</li>
+                <li>成都</li>
+                <li>北京</li>
+            </ul>
+            <p>热门城市</p>
+            <ul class="citys">
+                <li class="top">北京</li>
+                <li class="left top">上海</li>
+                <li class="left top">广州</li>
+                <li class="left top">深圳</li>
+                <li class="top1">杭州</li>
+                <li class="left top1">苏州</li>
+                <li class="left top1">西安</li>
+                <li class="left top1">江西</li>
+                <li class="top1">云南</li>
+                <li class="left top1">新疆</li>
+                <li class="left top1">浙江</li>
+                <li class="left top1">湖南</li>
+            </ul>
+            <p>更多城市</p>
+        </div>
+        <p class="a">A</p>
+        <ul class="city_name">
+            <li>安康</li>
+            <li>安阳</li>
+            <li>安顺</li>
+            <li>安西</li>
+            <li>安庆</li>
+            <li>安陆</li>
+            <li>安化</li>
+            <li>安仁</li>
+            <li>安冬</li>
+        </ul>
+        <ul class="num">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+            <li>G</li>
+            <li>J</li>
+            <li>K</li>
+            <li>L</li>
+            <li>N</li>
+            <li>P</li>
+            <li>Q</li>
+            <li>R</li>
+            <li>S</li>
+            <li>W</li>
+            <li>Y</li>
+        </ul>
+    </div>
+</body>
+</html>
+<script>
+    $(".city").on("tap", function () {
+        location.href = './Hospital_Homepage.html';
+    })
+</script>

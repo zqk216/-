@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <script src="./../plug/vue.js"></script>
+    <script src="../plug/axios.min.js"></script>
+    <script src="../plug/zepto.js"></script>
+    <script src="../plug/zepto.touch.js"></script>
+    <script src="./../plug/rem.js"></script>
+    <link rel="stylesheet" href="./../less/reset.css">
+    <link rel="stylesheet" href="./../less/Member_of_family.css">
+</head>
+<body>
+<div class="header">
+    <ul>
+        <li class="img_"><img src="./../imgs/Member_of_family/back@2x.png" alt=""></li>
+        <li>家庭成员</li>
+        <li><span id="span"><a href="#">编辑</a></span></li>
+    </ul>
+    
+</div>    
+<div id="box" class="main">
+  <ul>
+      <li v-for="(item,index) in data" @tap="fn(index)">
+         <div class="imgs"><img :src=" item.img" alt=""></div>
+         <div class="two">
+             <p>{{ item.name }}</p>
+             <p>
+                 <span>{{ item.sex }}</span>
+                 <span>{{ item.age }}</span>
+             </p>
+             <p>{{ item.details}} </p>
+         </div>
+         <div class="three">{{ item.month }}</div>  
+      </li>
+  </ul>    
+</div>
+<div class="footer">
+    <span><img src="./../imgs/Member_of_family/icon-4@2x.png" alt=""></span>
+    <span>+添加人员</span>
+</div>
+<script>
+    var vm=new Vue({
+        el:"#box",
+        data:{
+            data:[]
+        },
+        methods: {
+          fn(index){
+              if(index == 0){
+                location.href = './Confirm appointment1.html';
+              }
+          }  
+        },
+        mounted(){
+            var that=this
+            axios.get("./../json/Member_of_family.json")
+            .then(function(res){
+                console.log(res.data.data)
+                that.data = res.data.data
+            })
+        }
+
+    })
+    $(".img_").on("tap",function(){
+        location.href="./my_msg.html";
+    });
+    $(".footer").on("tap",function(){
+        location.href="./Editing information .html";
+    });
+    
+</script>
+</body>
+</html>

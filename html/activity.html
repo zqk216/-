@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../less/reset.css">
+    <link rel="stylesheet" href="../less/activity.css">
+    <script src="../plug/rem.js"></script>
+    <script src="../plug/zepto.js"></script>
+    <script src="../plug/zepto.touch.js"></script>
+</head>
+<body>
+    <div class="header">
+        资讯
+        <span class="aaa"><a href="./Exchange good.html">积分商城</a></span>
+    </div>
+    <div class="case_name">
+        <div class="bg_img">
+            <p>1/3</p>
+            <p>已完成</p>
+        </div>
+        <div class="text">
+            <span>今日任务1/3</span>
+            <span>今日积分100</span>
+            <span>总积分500</span>
+        </div>
+        <p class="hr"></p>
+        <ul class="alltext">
+            <li class="one">
+                <div class="left_img">
+                    <img src="../imgs/activity/icon-1@2x.png" alt="">
+                </div>
+                <div class="zj_text">
+                    <p>每日签到</p>
+                    <p>每日签到可获得100积分</p>
+                </div>
+                <div class="btn">
+                    <span>已签到</span>
+                </div>
+            </li>
+            <li class="two">
+                <div class="left_img">
+                    <img src="../imgs/activity/icon-2@2x.png" alt="">
+                </div>
+                <div class="zj_text">
+                    <p>邀请新用户关注</p>
+                    <p>分享二维码邀请10位新用户可获...</p>
+                </div>
+                <div class="btn">
+                    <span>去分享</span>
+                </div>
+            </li>
+            <li class="three">
+                <div class="left_img">
+                    <img src="../imgs/activity/icon-3@2x.png" alt="">
+                </div>
+                <div class="zj_text">
+                    <p>邀请新用户关注</p>
+                    <p>每日邀请前两个用户可获得100积...</p>
+                </div>
+                <div class="btn">
+                    <span>去邀请</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <ul class="footer">
+        <li class="index">
+            <p>
+                <img src="../imgs/my_msg/homepage copy 2@2x.png" alt="">
+            </p>
+            <p><a href="#">资讯</a></p>
+        </li>
+        <li class="two_">
+            <p>
+                <img src="../imgs/my_msg/createtask@2x.png" alt="">
+            </p>
+            <p><a href="#">资讯</a></p>
+        </li>
+        <li>
+            <img src="../imgs/activity/icon-4@2x.png" alt="">
+        </li>
+        <li class="my">
+            <p>
+                <img src="../imgs/activity/mine@2x.png" alt="">
+            </p>
+            <p><a href="#">我们</a></p>
+        </li>
+    </ul>
+</body>
+</html>
+<script>
+    $(".index").on("tap",function(){
+        location.href='./Hospital_Homepage.html';
+    })
+    $(".two_").on("tap",function(){
+        location.href='./information.html';
+    })
+    $(".my").on("tap",function(){
+        location.href='./my_msg.html';
+    })
+</script>

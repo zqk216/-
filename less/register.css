@@ -1,0 +1,209 @@
+@font-face {
+  font-family: big;
+  /*这里是说明调用来的字体名字*/
+  src: url("../font/PINGFANG\ BOLD.TTF");
+  /*这里是字体文件路径*/
+}
+@font-face {
+  font-family: small;
+  /*这里是说明调用来的字体名字*/
+  src: url("../font/PINGFANG\ REGULAR.TTF") /*这里是字体文件路径*/;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  font-size: 100px;
+  background: #FBFEFF;
+}
+.header {
+  width: 100%;
+  height: 3.85rem;
+  background: url("../imgs/register/register-top@2x.png") no-repeat 0 0;
+  background-size: 100%;
+}
+.header p {
+  width: 100%;
+  font-size: 0.16rem;
+}
+.header p img {
+  width: 100%;
+}
+.main {
+  overflow: hidden;
+  font-size: 0.16rem;
+  width: 6.86rem;
+  height: 5.64rem;
+  margin: 0 auto;
+  margin-top: -0.4rem;
+  background: #ffffff;
+  box-shadow: 0 0.1rem 0.5rem rgba(211, 245, 250, 0.6);
+}
+.main .details {
+  overflow: hidden;
+  width: 5.8rem;
+  margin: 0 auto;
+  margin-top: 0.7rem;
+}
+.main .details .one {
+  padding: 0.3rem 0.2rem 0;
+  box-sizing: border-box;
+}
+.main .details .one span {
+  float: left;
+}
+.main .details .one span img {
+  width: 0.248rem;
+  height: 0.303rem ;
+}
+.main .details .one .input {
+  overflow: hidden;
+  padding-bottom: 0.1rem;
+  border-bottom: 2px solid #F4F4F4;
+}
+.main .details .one .input input {
+  float: left;
+  height: 0.4rem;
+  margin-left: 0.25rem;
+  border: none;
+  color: #CBCBCB;
+  font-family: small;
+  font-size: 0.28rem;
+  outline: none;
+}
+.main .details .one .input p {
+  float: right;
+  height: 0.4rem;
+  line-height: 0.4rem;
+}
+.main .details .one .input p span:nth-child(1) {
+  color: #CBCBCB;
+  padding-right: 0.25rem;
+}
+.main .details .one .input p span:nth-child(2) {
+  font-family: small;
+  font-size: 0.28rem;
+  color: #4A4A4A;
+  padding-right: 0.25rem;
+}
+.main .details .one .input p span:nth-child(3) img {
+  margin-top: 0.05rem;
+  width: 0.35rem;
+  height: 0.212rem;
+}
+.main .details .two {
+  padding: 0.3rem 0.2rem 0;
+  box-sizing: border-box;
+}
+.main .details .two span {
+  float: left;
+}
+.main .details .two span img {
+  width: 0.248rem;
+  height: 0.303rem ;
+}
+.main .details .two .input {
+  overflow: hidden;
+  padding-bottom: 0.1rem;
+  border-bottom: 2px solid #F4F4F4;
+}
+.main .details .two .input input {
+  float: left;
+  height: 0.4rem;
+  margin-left: 0.25rem;
+  border: none;
+  color: #CBCBCB;
+  font-family: small;
+  font-size: 0.28rem;
+  outline: none;
+}
+.main .details .two .input p {
+  float: right;
+  height: 0.4rem;
+  line-height: 0.4rem;
+}
+.main .details .two .input p span {
+  color: #CBCBCB;
+  font-family: small;
+  font-size: 0.28rem;
+}
+.main .details .three {
+  padding: 0.3rem 0.2rem 0;
+  box-sizing: border-box;
+}
+.main .details .three span {
+  float: left;
+}
+.main .details .three span img {
+  width: 0.248rem;
+  height: 0.303rem ;
+}
+.main .details .three .input {
+  overflow: hidden;
+  padding-bottom: 0.1rem;
+  border-bottom: 2px solid #F4F4F4;
+}
+.main .details .three .input input {
+  float: left;
+  height: 0.4rem;
+  margin-left: 0.25rem;
+  border: none;
+  color: #CBCBCB;
+  font-family: small;
+  font-size: 0.28rem;
+  outline: none;
+}
+.main .details .three .input p {
+  float: right;
+  height: 0.4rem;
+  line-height: 0.4rem;
+}
+.main .details .three .input p span {
+  padding-top: 0.04rem;
+  color: #CBCBCB;
+}
+.main .details .three .input p span img {
+  width: 0.25rem;
+  height: 0.25rem;
+}
+.main .register {
+  margin-top: 0.6rem;
+  text-align: center;
+}
+.main .register input {
+  width: 5.93rem;
+  height: 0.91rem;
+  border: none;
+  background: #9b9b9b;
+  border-radius: 10px;
+  font-family: big;
+  font-size: 0.34rem;
+  color: #FFFFFF;
+}
+.mb1 {
+  width: 4rem;
+  height: 2rem;
+  margin: 0 auto;
+  background: white;
+  text-align: center;
+  position: fixed;
+  top: 1rem;
+  left: 1.7rem;
+  border-radius: 0.1rem;
+  display: none;
+}
+.mb1 p {
+  font-family: big;
+  font-size: 0.3rem;
+  padding-top: 0.35rem;
+}
+.mb1 p button {
+  padding: 0.1rem 0.5rem;
+  background: #cbcbcb;
+  color: #4A4A4A;
+  border: none;
+  outline: none;
+  font-size: 0.17rem;
+}

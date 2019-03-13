@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: big;
+  /*这里是说明调用来的字体名字*/
+  src: url("../font/PINGFANG\ BOLD.TTF");
+  /*这里是字体文件路径*/
+}
+@font-face {
+  font-family: small;
+  /*这里是说明调用来的字体名字*/
+  src: url("../font/PINGFANG\ REGULAR.TTF");
+  /*这里是字体文件路径*/
+}
+.header {
+  box-shadow: 0 0.2rem 1rem rgba(86, 87, 87, 0.5) inset;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  background-size: 100%;
+}
+.header a {
+  color: white;
+}
+.header .title {
+  overflow: hidden;
+  display: inline-block;
+  margin-top: 0.1rem;
+  margin-left: 0.32rem;
+}
+.header .title img {
+  width: 0.32rem;
+  height: 0.4rem;
+  vertical-align: -0.1rem;
+}
+.header .title .title_text {
+  font-family: big;
+  font-size: 0.3rem;
+  color: white;
+}
+.header .right {
+  width: 0.44rem;
+  height: 0.47rem;
+  float: right;
+  position: relative;
+  margin-top: 0.2rem;
+  margin-right: 0.32rem;
+}
+.header .right img {
+  width: 0.34rem;
+  height: 0.39rem;
+}
+.header .right span {
+  color: white;
+  text-align: center;
+  font-family: small;
+  font-size: 0.15rem;
+  display: inline-block;
+  width: 0.25rem;
+  height: 0.18rem;
+  background: #fc6b7d;
+  border-radius: 0.1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.swiper-container swiper-container-horizontal swiper-container-android {
+  width: 100%;
+  height: 3.85rem;
+}
+.swiper-slide > img {
+  width: 100%;
+  height: 100%;
+}
+.bg_color {
+  width: 100%;
+  background: #fbfeff;
+}
+.bg_color .allul {
+  background: white;
+  width: 100%;
+  padding-bottom: 0.25rem;
+  box-shadow: 0 0.1rem 0.5rem rgba(211, 245, 250, 0.6);
+}
+.bg_color .allul .mian_one {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  padding-top: 0.3rem;
+}
+.bg_color .allul .mian_one li {
+  flex: 1;
+  text-align: center;
+}
+.bg_color .allul .mian_one li img {
+  width: 1.48rem;
+  height: 1.48rem;
+}
+.bg_color .allul .mian_text {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+}
+.bg_color .allul .mian_text li {
+  font-family: small;
+  font-size: 0.25rem;
+  flex: 1;
+  text-align: center;
+}
+.bg_color .allul .mian_text li a {
+  color: #4a90e2;
+}
+.bg_color .content {
+  background: white;
+  width: 6.86rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+  margin-top: 0.3rem;
+  box-shadow: 0 0.1rem 0.5rem rgba(211, 245, 250, 0.6);
+  padding: 0.3rem;
+}
+.bg_color .content .content_title {
+  font-family: big;
+  font-size: 0.34rem;
+  color: #4a90e2;
+  background: white;
+  overflow: hidden;
+}
+.bg_color .content .content_title span {
+  float: right;
+  font-family: big;
+  font-size: 0.3rem;
+  padding: 0.05rem 0.1rem;
+}
+.bg_color .content .content_title span a {
+  color: #4a90e2;
+}
+.bg_color .content .top {
+  display: flex;
+  margin-top: 0.2rem;
+}
+.bg_color .content .top li {
+  display: flex;
+  width: 3.06rem;
+  height: 1.63rem;
+  margin-right: 0.1rem;
+  box-shadow: 0 0rem 0.15rem rgba(211, 245, 250, 0.6);
+}
+.bg_color .content .top li p {
+  font-family: big;
+  font-size: 0.25rem;
+  color: #01bad4;
+  flex: 1;
+  margin-top: 0.2rem;
+  margin-left: 0.1rem;
+}
+.bg_color .content .top li p img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.bg_color .content .top li:nth-child(2) {
+  margin-left: 0.3rem;
+}
+.bg_color .main_three {
+  width: 6.86rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+  margin-top: 0.3rem;
+  box-shadow: 0 0.1rem 0.5rem rgba(211, 245, 250, 0.6);
+  padding: 0.3rem;
+}
+.bg_color .main_three .content_titles {
+  font-family: big;
+  font-size: 0.34rem;
+  color: #4a90e2;
+  background: white;
+}
+.bg_color .main_three .content_titles span {
+  float: right;
+  font-family: big;
+  font-size: 0.3rem;
+  padding: 0.05rem 0.1rem;
+}
+.bg_color .main_three .content_titles span a {
+  color: #4a90e2;
+}
+.bg_color .main_three #box {
+  width: 100%;
+}
+.bg_color .main_three #box li {
+  background: white;
+  padding: 0.26rem;
+  box-sizing: border-box;
+  box-shadow: 0 0.1rem 0.5rem rgba(211, 245, 250, 0.6);
+  display: flex;
+  margin-top: 0.2rem;
+}
+.bg_color .main_three #box li .item_img {
+  flex: 1;
+}
+.bg_color .main_three #box li .item_img img {
+  width: 1.28rem;
+  height: 1.28rem;
+}
+.bg_color .main_three #box li .item_content {
+  flex: 3;
+  overflow: hidden;
+}
+.bg_color .main_three #box li .item_content .name {
+  font-family: big;
+  font-size: 0.26rem;
+  color: #4a90e2;
+}
+.bg_color .main_three #box li .item_content .name span {
+  font-family: small;
+  font-size: 0.2rem;
+  color: #9b9b9b;
+  float: right;
+}
+.bg_color .main_three #box li .item_content .where {
+  font-family: small;
+  font-size: 0.2rem;
+  color: #9b9b9b;
+  margin-top: 0.46rem;
+}
+.bg_color .main_three #box li:nth-child(3) {
+  margin-bottom: 1.1rem;
+}
+.footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  padding: 0.16rem;
+  background: white;
+  box-shadow: 0 -0.1rem 0.5rem rgba(211, 245, 250, 0.6);
+}
+.footer li {
+  flex: 1;
+  text-align: center;
+}
+.footer li img {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+.footer li p {
+  font-family: small;
+  font-size: 0.22rem;
+  color: #4a4a4a;
+}
+.footer li p img {
+  width: 0.4rem;
+  height: 0.4rem;
+}

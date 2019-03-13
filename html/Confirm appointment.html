@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../less/reset.css">
+    <link rel="stylesheet" href="../less/Confirm appointment.css">
+    <script src="../plug/axios.min.js"></script>
+    <script src="../plug/rem.js"></script>
+    <script src="../plug/vue.js"></script>
+    <script src="../plug/zepto.js"></script>
+    <script src="../plug/zepto.touch.js"></script>
+</head>
+
+<body>
+    <div class="box-a">
+        <ul>
+            <li><img src="../imgs/Integral mall   积分商城/2.png" alt=""></li>
+            <li><span>预约</span></li>
+        </ul>
+    </div>
+    <div class="box-b">
+        <div><img src="../imgs/Confirm appointment确认预约/head@2x.png" alt=""></div>
+        <div>
+            <p><span>上海市东方医院</span><span>(呼吸科-张红娟)</span></p>
+            <p><span>门科预约</span><span>></span></p>
+            <p><span class="span1">时间:2017-10-19 10:00-11:00</span></p>
+        </div>
+    </div>
+    <div class="box-c">
+        <p><span></span><span><a href="./Member_of_family.html">添加患者</a></span></p>
+        <p><span><label for="#">填写手机号:</label><input type="text" placeholder="123456789000"></span><span><img src="../imgs/Confirm appointment确认预约/icon-1@2x.png" alt=""></span> </p>
+    </div>
+    <div class="box-d">
+        <p v-for="item in data">
+            <span>{{ item.name}}{{item.sex}}</span>
+            <span>{{item.call}}{{item.diagnose}}</span>
+        </p>
+        <p><span><label for="#">填写手机号:</label><input type="text" placeholder="123456789000"></span><span><img src="../imgs/Confirm appointment确认预约/icon-1@2x.png" alt=""></span> </p>
+    </div>
+    <div class="box-e">
+        <p><a href="#">确认预约</a></p>
+    </div>
+</body>
+
+</html>
+<script>
+    var vm = new Vue({
+        el: '.box-d',
+        data: {
+            data: [],
+        },
+        mounted() {
+            var that = this;
+            axios.get("../json/Confirm appointment.json").then(function(res) {
+                console.log(res);
+                that.data = res.data;
+                console.log(that.data);
+            }).catch(function(err) {
+                console.log(err);
+            })
+        }
+    });
+</script>

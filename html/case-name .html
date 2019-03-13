@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../less/reset.css">
+    <link rel="stylesheet" href="../less/case-name.css">
+    <script src="../plug/axios.min.js"></script>
+    <script src="../plug/zepto.js"></script>
+    <script src="../plug/zepto.touch.js"></script>
+    <script src="../plug/rem.js"></script>
+    <script src="../plug/vue.js"></script>
+</head>
+
+<body>
+    <div class="box-a">
+        <ul>
+            <li class="img_">
+                <img src="../imgs/case-name 病例/back@3x.png" alt="">
+            </li>
+            <li>
+                <span>病例</span>
+            </li>
+            <li>
+                <img src="../imgs/case-name 病例/find@2x.png" alt="">
+            </li>
+        </ul>
+    </div>
+    <div class="box-b">
+        <ul>
+            <li>
+                <span>王武</span>
+                <p></p>
+            </li>
+            <li><span>李四</span></li>
+            <li><span>张三</span></li>
+            <li><span>赵六</span></li>
+        </ul>
+    </div>
+    <div class="box-c">
+        <ul>
+            <li>
+                <p><img src="../imgs/case-name 病例/back@3x.png" alt=""></p>
+            </li>
+            <li>
+                <p>
+                    <img src="../imgs/case-name 病例/head@2x.png" alt="">
+                </p>
+                <p>
+                    <span>王武</span>
+                </p>
+                <p><span>年龄：76</span></p>
+            </li>
+            <li>
+                <p><img src="../imgs/case-name 病例/back-2.png" alt=""></p>
+            </li>
+        </ul>
+    </div>
+    <div class="box-d">
+        <ul>
+            <li v-for="item in data">
+                <p>
+                    <span>{{item.name}}</span>
+                    <span>{{item.data}}</span>
+                </p>
+                <p><span>{{item.position}}</span><span>{{item.positions}}</span></p>
+                <p><span>{{item.names}}</span><span>{{item.Condition}}</span></p>
+                <p><span>{{item.num}}</span><span>{{item.nums}}</span> </p>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
+<script>
+    var vm = new Vue({
+        el: '.box-d',
+        data: {
+            data: [],
+        },
+        mounted() {
+            var that = this;
+            axios.get("../json/病例.json").then(function(res) {
+                console.log(res);
+                that.data = res.data;
+            }).catch(function(err) {
+                console.log(err);
+            })
+        }
+    });
+    $(".img_").on("tap",function(){
+        location.href='./Hospital_Homepage.html';
+    })
+</script>

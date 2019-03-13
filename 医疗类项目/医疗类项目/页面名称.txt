@@ -1,0 +1,28 @@
+index                 主页
+login                  登录
+register              注册
+Doctor's profile  医生简介
+Hospital introduction   医院简介
+Doctor List   医生列表
+Current city  当前城市
+List of hospitals   医院列表
+Hospital Homepage  医院主页
+Confirm appointment   确认预约
+news   消息
+System message  系统消息
+case   病例
+My order    我的订单
+Order details 订单详情
+Live information  生活资讯
+information       资讯
+activity     活动
+Integral mall   积分商城
+Exchange goods   以兑换商品
+Commodity introduction  商品介绍
+Receiving address   收货地址
+Health consultant   健康顾问
+Member of family  家庭成员
+Editing information   编辑信息
+
+
+

@@ -1,0 +1,109 @@
+@font-face {
+  font-family: big;
+  /*这里是说明调用来的字体名字*/
+  src: url("../font/PINGFANG\ BOLD.TTF");
+  /*这里是字体文件路径*/
+}
+@font-face {
+  font-family: small;
+  /*这里是说明调用来的字体名字*/
+  src: url("../font/PINGFANG\ REGULAR.TTF") /*这里是字体文件路径*/;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+.header {
+  font-size: 0.16rem;
+  height: 1rem;
+  margin: 0 auto;
+  background: -webkit-linear-gradient(-45deg, #01bad4, #4a90e2);
+}
+.header ul {
+  padding-top: 0.4rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  color: #f2f2f2;
+  font-family: big;
+  font-size: 0.28rem;
+}
+.header ul li:nth-child(1) {
+  padding-left: 0.32rem;
+}
+.header ul li:nth-child(3) {
+  padding-right: 0.32rem;
+}
+.header ul .img_ img {
+  width: 0.15rem;
+  height: 0.25rem;
+}
+.header #span a {
+  color: white;
+}
+.main {
+  width: 100%;
+}
+.main ul {
+  list-style: none;
+  margin-top: 0.34rem;
+}
+.main ul li {
+  width: 6.7rem;
+  height: 2.1rem;
+  box-shadow: 0 0.1rem 0.5rem rgba(211, 245, 250, 0.6);
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+  display: flex;
+}
+.main ul li .imgs {
+  flex: 2;
+}
+.main ul li .imgs img {
+  width: 1.7rem;
+  height: 1.7rem;
+}
+.main ul li .two {
+  flex: 4;
+  margin-top: 0.3rem;
+}
+.main ul li .two p:nth-child(1) {
+  font-size: 0.24rem;
+  font-family: big;
+  color: #4a90e2;
+}
+.main ul li .two p:nth-child(2) {
+  font-size: 0.22rem;
+  font-family: small;
+  color: #9b9b9b;
+  margin: 0.1rem 0;
+}
+.main ul li .two p:nth-child(3) {
+  font-size: 0.2rem;
+  font-family: small;
+  color: #9b9b9b;
+}
+.main ul li .three {
+  flex: 2;
+  font-size: 0.2rem;
+  font-family: small;
+  color: #9b9b9b;
+  margin-top: 1.3rem ;
+  margin-left: 1.4rem;
+}
+.footer {
+  width: 6.7rem;
+  height: 2.1rem;
+  box-shadow: 0 0.1rem 0.5rem rgba(211, 245, 250, 0.6);
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+}
+.footer span img {
+  width: 1.70rem;
+  height: 1.70rem;
+}
+.footer span:nth-child(2) {
+  font-size: 0.22rem;
+  font-family: small;
+  vertical-align: 0.8rem;
+}

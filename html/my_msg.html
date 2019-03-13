@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../less/reset.css">
+    <link rel="stylesheet" href="../less/my_msg.css">
+    <script src="../plug/axios.min.js"></script>
+    <script src="../plug/zepto.js"></script>
+    <script src="../plug/zepto.touch.js"></script>
+    <script src="../plug/rem.js"></script>
+    <script src="../plug/vue.js"></script>
+</head>
+
+<body>
+    <div class="header"></div>
+    <div class="person">
+        <p class="right_img">
+            <img src="../imgs/my_msg/设置@2x.png" alt="" class="img_1">
+        </p>
+        <div class="text">
+            <p class="big_img">
+                <img src="../imgs/my_msg/head@2x.png" alt="">
+            </p>
+            <div class="right">
+                <p class="name">曲婉婷</p>
+                <p class="isok">健康指数：99.99%</p>
+            </div>
+        </div>
+    </div>
+    <ul class="ul1">
+        <li class="person1">
+            <img src="../imgs/my_msg/icon-1@2x.png" alt="">
+        </li>
+        <li class="come">
+            <img src="../imgs/my_msg/icon-2@2x.png" alt="">
+        </li>
+        <li>
+            <img src="../imgs/my_msg/icon-3@2x.png" alt="">
+        </li>
+    </ul>
+    <ul class="ul2">
+        <li class="person1">
+            家庭成员
+        </li>
+        <li class="come">
+            就医记录
+        </li>
+        <li>
+            卡包
+        </li>
+    </ul>
+    <div class="main">
+        <ul class="main_content">
+            <li>
+                <span><img src="../imgs/my_msg/星级@2x.png" alt=""></span>
+                <span>我的收藏</span>
+            </li>
+            <li>
+                <span><img src="../imgs/my_msg/药品@2x.png" alt=""></span>
+                <span>我的用药</span>
+            </li>
+            <li class="jl">
+                <span><img src="../imgs/my_msg/日历@2x.png" alt=""></span>
+                <span>交易记录</span>
+            </li>
+            <li>
+                <span><img src="../imgs/my_msg/编辑@2x.png" alt=""></span>
+                <span>用户协议</span>
+            </li>
+            <li>
+                <span><img src="../imgs/my_msg/医生@2x.png" alt=""></span>
+                <span>关于我们</span>
+            </li>
+        </ul>
+    </div>
+
+    <ul class="footer">
+        <li class="index">
+            <p>
+                <img src="../imgs/my_msg/homepage copy 2@2x.png" alt="">
+            </p>
+            <p>资讯</p>
+        </li>
+        <li class="img_">
+            <p>
+                <img src="../imgs/my_msg/createtask@2x.png" alt="">
+            </p>
+            <p>资讯</p>
+        </li>
+        <li class="activity">
+            <p>
+                <img src="../imgs/my_msg/coupons copy 2@2x.png" alt="">
+            </p>
+            <p>活动</p>
+        </li>
+        <li>
+            <img src="../imgs/my_msg/icon@2x.png" alt="">
+        </li>
+    </ul>
+</body>
+
+</html>
+<script>
+    $(".activity").on("tap",function(){
+        location.href="./activity.html";
+    });
+    $(".jl").on("tap",function(){
+        location.href="./Myorder.html";
+    });
+    $(".img_").on("tap",function(){
+        location.href="./information.html";
+    });
+    $(".person1").on("tap",function(){
+        location.href="./Member_of_family.html";
+    });
+    $(".come").on("tap",function(){
+        location.href="./case-name .html";
+    });
+    $(".index").on("tap",function(){
+        location.href="./Hospital_Homepage.html";
+    });
+    $(".img_1").on("tap",function(){
+        location.href="./login.html";
+    });
+</script>

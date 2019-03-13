@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../less/reset.css">
+    <link rel="stylesheet" href="../less/Myorder.css">
+    <script src="../plug/axios.min.js"></script>
+    <script src="../plug/rem.js"></script>
+    <script src="../plug/vue.js"></script>
+    <script src="../plug/zepto.js"></script>
+    <script src="../plug/zepto.touch.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <img src="../imgs/Doctor List/back@2x.png" alt="" class="href">
+        <span>我的订单</span>
+        <span class="change">删除</span>
+    </div>
+    <ul class="zt">
+        <li>全部
+            <p></p>
+        </li>
+        <li>未支付</li>
+        <li>已完成</li>
+        <li>已取消</li>
+    </ul>
+    
+    <ul class="vue_text" id="box">
+        <li v-for="(item,index) in data" @tap="fn(index)">
+            <p class="item_title">
+                <img  :src="item.img" alt="" class="change_img" v-show="istrue" @click="fn(index)">
+                <img  :src="item.img1" alt="" class="change_img1" v-show="isfalse" @click="fn1(index)">
+                {{ item.money }}
+                <span>{{ item.isok }}</span>
+            </p>
+            <p class="where">{{ item.where }}</p>
+            <p class="km">
+                {{ item.km }}
+            </p>
+            <p class="item_last">
+                {{ item.time }}
+                <span>
+                    <img :src="item.img_" alt="">
+                    {{ item.price}}
+                </span>
+            </p>
+        </li>
+    </ul>
+
+    <div class="footer">
+        <button>去支付</button>
+    </div>
+</body>
+
+</html>
+<script>
+    var vm = new Vue({
+        el:"#box",
+        data:{
+            data:[],
+            istrue:true,
+            isfalse:false
+        },
+        methods: {
+          fn(index){
+              if(index == 0){
+                  location.href = "./Order details.html";
+              }
+          }  
+        },
+        mounted () {
+            var that = this;
+            axios.get("../json/Myorder.json")
+            .then(function(res){
+                that.data = res.data.myOrder;
+            }).catch(function(err){
+                console.log(err);
+            })
+        }
+    })
+
+    $(".change").on('tap',function(){
+        $(".change_img1").show();
+        $(".change_img").hide();
+    })
+    $(".href").on("tap",function(){
+        location.href = "./my_msg.html";
+    })
+</script>

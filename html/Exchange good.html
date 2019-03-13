@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../less/reset.css">
+    <link rel="stylesheet" href="../less/Exchange good.css">
+    <script src="../plug/axios.min.js"></script>
+    <script src="../plug/zepto.js"></script>
+    <script src="../plug/zepto.touch.js"></script>
+    <script src="../plug/rem.js"></script>
+    <script src="../plug/vue.js"></script>
+
+
+
+</head>
+
+<body>
+    <div class="box-a">
+        <ul>
+            <li class="img_"><img src="../imgs/Integral mall   积分商城/2.png" alt=""></li>
+            <li><span>积分商城</span></li>
+        </ul>
+    </div>
+    <div class="box-b">
+        <ul>
+            <li>
+                <a href="../html/Integral mall.html" class="a1">积分商城</a>
+            </li>
+            <li class="liq">
+                <a href="./Integral mall.html" class="a" style="color: #cbcbcb;">已兑换商品</a>
+            </li>
+        </ul>
+    </div>
+    <div id="box-c">
+        <ul>
+            <li v-for="(item,index) in data">
+                <div><img :src="item.img" class="img1"></div>
+                <div class="div2">
+                    <p class="p1">{{ item.text }}</p>
+                    <p>{{item.location}}</p>
+                    <div class="div-1">
+                        <p class="pp"><img :src="item.imgs" class="img2"><span class="span2">{{item.price}}</span></p>
+                        <p class="ppa" @tap="fn(index)"><button>{{item.num}}</button></p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
+<script>
+    var vm = new Vue({
+        el: '#box-c',
+        data: {
+            data: [],
+        },
+        methods: {
+            fn(index) {
+                if (index == 0) {
+                    location.href = './39.html';
+                }
+            }
+        },
+        mounted() {
+            var that = this;
+            axios.get("../json/Exchange good.json").then(function(res) {
+                console.log(res);
+                that.data = res.data;
+            }).catch(function(err) {
+                console.log(err);
+            })
+        }
+    });
+    $(".img_").on("tap", function() {
+        location.href = './activity.html';
+    })
+</script>

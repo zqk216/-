@@ -1,0 +1,8 @@
+{
+    "List_of_hospitals":[
+        {"img":"../imgs/List of hospitals/pic-1@2x.png","name":"上海东方医院","km":"590km","dj":"综合性三甲医院","good":"好评:","percent":"95%","look":"查看"},
+        {"img":"../imgs/List of hospitals/pic-2@2x.png","name":"深圳市启明医院","km":"8279km","dj":"二级甲等","good":"好评:","percent":"95%","look":"查看"},
+        {"img":"../imgs/List of hospitals/pic-3@2x.png","name":"北京市东方医院","km":"827km","dj":"综合性三甲医院","good":"好评:","percent":"95%","look":"查看"},
+        {"img":"../imgs/List of hospitals/pic-4@2x.png","name":"天津市启明医院","km":"876km","dj":"二级甲等","good":"好评:","percent":"95%","look":"查看"}
+    ]
+}
